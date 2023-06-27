@@ -187,6 +187,7 @@ jobs:
         # с которым установлено соединение
         script: |
           cd taski
+          sudo docker image rm $(sudo docker image ls -f "dangling=true" -q)
           # Выполняет pull образов с Docker Hub
           sudo docker compose -f docker-compose.production.yml pull
           # Перезапускает все контейнеры в Docker Compose
