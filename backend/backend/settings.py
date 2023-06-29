@@ -1,10 +1,10 @@
 import os
 from pathlib import Path
 
-LOCAL_SERVER_URL=os.getenv('LOCAL_SERVER_URL', default='127.0.0.1')
-LOCAL_SERVER_NAME=os.getenv('LOCAL_SERVER_NAME', default='localhost')
-WEB_SERVER_URL=os.getenv('WEB_SERVER_URL')
-WEB_SERVER_NAME=os.getenv('WEB_SERVER_NAME')
+LOCAL_SERVER_URL = os.getenv('LOCAL_SERVER_URL', default='127.0.0.1')
+LOCAL_SERVER_NAME = os.getenv('LOCAL_SERVER_NAME', default='localhost')
+WEB_SERVER_URL = os.getenv('WEB_SERVER_URL')
+WEB_SERVER_NAME = os.getenv('WEB_SERVER_NAME')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,7 +12,12 @@ SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$
 
 DEBUG = False
 
-ALLOWED_HOSTS = [LOCAL_SERVER_URL, LOCAL_SERVER_NAME, WEB_SERVER_URL, WEB_SERVER_NAME]
+ALLOWED_HOSTS = [
+    LOCAL_SERVER_URL,
+    LOCAL_SERVER_NAME,
+    WEB_SERVER_URL,
+    WEB_SERVER_NAME
+    ]
 
 
 # Application definition
