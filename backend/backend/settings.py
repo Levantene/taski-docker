@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-whatever123')
 LOCAL_SERVER_URL = os.getenv('LOCAL_SERVER_URL', default='127.0.0.1')
 LOCAL_SERVER_NAME = os.getenv('LOCAL_SERVER_NAME', default='localhost')
 WEB_SERVER_URL = os.getenv('WEB_SERVER_URL')
